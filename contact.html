@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Moto-Drifter</title>
     <link rel="stylesheet" href="Style/contact.css">
 </head>
 <body>
 
-    <h1>Moto-Drifter</h1>
+    <header>
+        <h1>Moto-Drifter</h1>
+    </header>
 
     <nav>
         <ul style="list-style:none; padding:0;">
@@ -18,10 +21,9 @@
     </nav>
 
     <section>
+        <!-- Contact Information Area -->
         <h2>Contact Us</h2>
-
         <p>You can reach us through:</p>
-
         <ul>
             <li>Email: moto.drifter@gmail.com</li>
             <li>Phone: +63 909 021 1087</li>
@@ -29,6 +31,52 @@
             <li>Instagram: Moto-DrifterPH</li>
             <li>Viber: Moto-Drifter No.1</li>
         </ul>
+
+        <!-- Contact Form Area -->
+        <h2>Send a Message</h2>
+        
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Your details</legend>
+
+                <!-- Name Input -->
+                <div>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <br>
+
+                <!-- Email Input -->
+                <div>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+
+                <!-- Subject Dropdown Selection -->
+                <div>
+                    <label for="subject">Subject</label><br>
+                    <select id="subject" name="subject">
+                        <option value="suggest">Suggest a place</option>
+                        <option value="correct">Correct a guide details</option>
+                        <option value="question">Ask a question</option>
+                        <option value="other">Something else</option>
+                    </select>
+                </div>
+                <br>
+
+                <!-- Client Message Text Area -->
+                <div>
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <br>
+
+                <!-- Submit Button -->
+                <button type="submit">Send message</button>
+            </fieldset>
+        </form>
+
     </section>
 
 </body>
