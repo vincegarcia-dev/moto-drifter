@@ -49,5 +49,63 @@
             </tbody>
         </table>
     </section>
+
+    <section>
+        <h2>Suggest a Place</h2>
+        <form action="#" method="POST">
+            
+            
+            <div>
+                <label for="placeName">Place name:</label>
+                <input type="text" id="placeName" name="placeName" required>
+            </div>
+            <br>
+
+        
+            <fieldset>
+                <legend>Category</legend>
+                <div>
+                    <input type="radio" id="catFood" name="placeCategory" value="food">
+                    <label for="catFood">Food</label>
+                </div>
+                <div>
+                    <input type="radio" id="catStudy" name="placeCategory" value="study">
+                    <label for="catStudy">Study spot</label>
+                </div>
+                <div>
+                    <input type="radio" id="catOutdoors" name="placeCategory" value="outdoors">
+                    <label for="catOutdoors">Outdoors</label>
+                </div>
+            </fieldset>
+            <br>
+
+            
+            <fieldset>
+                <legend>What's good about it?</legend>
+                <div>
+                    <input type="checkbox" id="featAffordable" name="goodFeatures" value="affordable">
+                    <label for="featAffordable">Affordable</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="featWifi" name="goodFeatures" value="wifi">
+                    <label for="featWifi">Good WiFi</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="featQuiet" name="goodFeatures" value="quiet">
+                    <label for="featQuiet">Quiet</label>
+                </div>
+            </fieldset>
+            <br>
+
+            <!-- 4. Contact email -->
+            <div>
+                <label for="contactEmail">Contact email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+            </div>
+            <br>
+
+            <button type="submit">Submit Suggestion</button>
+        </form>
+    </section>
 </body>
 </html>
