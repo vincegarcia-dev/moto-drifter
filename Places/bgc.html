@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonifacio Global City</title>
-    <style></style>
+    <style>
+        /* Centers the main heading and the top section */
+        h1, .top-section {
+            text-align: center;
+        }
 
-    <center> 
+        /* Flexbox layout to center the navigation links in a row */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Adjusts the space between Home, About, and Contact */
+        }
+        
+        /* Increases the font size to match your reference image */
+        nav a {
+            font-size: 18px;
+        }
+
+        /* Centers the table horizontally */
+        table {
+            margin: 0 auto; 
+        }
+    </style>
+</head>
+<body>
+
     <h1>Moto-Drifter</h1>
+    
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -15,7 +42,8 @@
             <li><a href="../contact.html">Contact</a></li>
         </ul>
     </nav>
-    <section>
+    
+    <section class="top-section">
         <h2>Bonifacio Global City</h2>
 
         <img src="../Images/bgc.jpg" alt="Bonifacio Global City" width="400">
@@ -25,7 +53,7 @@
             It is known for its upscale shopping, vibrant culinary scene, striking public art murals, green open parks, and buzzing nightlife.
         </p>
 
-        <table border="">
+        <table border="1">
             <tbody>
                 <tr>
                     <th>Located</th>
@@ -51,17 +79,17 @@
         </table>
     </section>
 
+    <hr>
+
     <section>
         <h2>Suggest a Place</h2>
         <form action="#" method="POST">
-            
             
             <div>
                 <label for="placeName">Place name:</label>
                 <input type="text" id="placeName" name="placeName" required>
             </div>
             <br>
-
         
             <fieldset>
                 <legend>Category</legend>
@@ -79,7 +107,6 @@
                 </div>
             </fieldset>
             <br>
-
             
             <fieldset>
                 <legend>What's good about it?</legend>
@@ -98,7 +125,6 @@
             </fieldset>
             <br>
 
-            <!-- 4. Contact email -->
             <div>
                 <label for="contactEmail">Contact email:</label>
                 <input type="email" id="contactEmail" name="contactEmail" required>
