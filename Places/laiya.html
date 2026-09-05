@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laiya Beaches - Moto-Drifter</title>
+    <link rel="stylesheet" href="../Homepage_styles/index.css">
+    <link rel="stylesheet" href="../Product_styles/laiya.css">
+</head>
+<body>
+
+    <header>
+        <h1>Moto-Drifter</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="details-container">
+            
+            <!-- Location Details Card -->
+            <section class="card detail-card">
+                <h2>Laiya Beaches</h2>
+                <img src="../Images/laiya beach.jpg" alt="Laiya White Sand Beach">
+                
+                <p>Laiya is a popular coastal destination in San Juan, Batangas, renowned for its long stretch of creamy white sand and clear waters. <br>It is a favorite getaway for beachgoers seeking relaxation, thrilling water sports like jet skiing and banana boating, and a variety of beachfront accommodations ranging from budget-friendly to luxurious.</p>
+
+                <table class="info-table">
+                    <tbody>
+                        <tr>
+                            <th>Located</th>
+                            <td>San Juan, Batangas</td>
+                        </tr>
+                        <tr>
+                            <th>Opening Hours</th>
+                            <td>Varies by resort (Day tours typically 8:00 AM - 5:00 PM)</td>
+                        </tr>
+                        <tr>
+                            <th>Best Time to Visit</th>
+                            <td>November to May (Dry Season)</td>
+                        </tr>
+                        <tr>
+                            <th>Entrance Fee</th>
+                            <td>₱20 Environmental Fee + Resort Entrance Fee</td>
+                        </tr>
+                         <tr>
+                            <th>Type</th>
+                            <td>Tropical Beach Destination</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Suggestion Form Card -->
+            <section class="card form-card">
+                <h2 style="text-align: center;">Suggest a Resort or Activity</h2>
+                
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="placeName">Place/Activity name:</label>
+                        <input type="text" id="placeName" name="placeName" required>
+                    </div>
+                    
+                    <fieldset class="choice-group">
+                        <legend>Category</legend>
+                        <div class="choice-item">
+                            <input type="radio" id="catResort" name="placeCategory" value="resort">
+                            <label for="catResort">Beach Resort</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="radio" id="catWaterSport" name="placeCategory" value="watersport">
+                            <label for="catWaterSport">Water Sport</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="radio" id="catFood" name="placeCategory" value="food">
+                            <label for="catFood">Seafood / Restaurant</label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="choice-group">
+                        <legend>What's good about it?</legend>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featBeachfront" name="goodFeatures" value="beachfront">
+                            <label for="featBeachfront">Beachfront Access</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featAffordable" name="goodFeatures" value="affordable">
+                            <label for="featAffordable">Affordable</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featPetFriendly" name="goodFeatures" value="petfriendly">
+                            <label for="featPetFriendly">Pet-friendly</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Contact email:</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Suggestion</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Moto-Drifter. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

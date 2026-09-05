@@ -4,75 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moto-Drifter</title>
+    <!-- Linked stylesheet as requested -->
+    <link rel="stylesheet" href="Homepage_styles/index.css">
 </head>
 <body>
-    <center>
+    <header>
         <h1>Moto-Drifter</h1>
         <p>Two Wheels. Zero Grip. Pure Adrenaline.</p>
-
         <nav>
-            <ul style="list-style:none; padding:0;">
-                <li style="display:inline; margin:0 15px;">
-                    <a href="index.html">Home</a>
-                </li>
-                <li style="display:inline; margin:0 15px;">
-                    <a href="about.html">About</a>
-                </li>
-                <li style="display:inline; margin:0 15px;">
-                    <a href="contact.html">Contact</a>
-                </li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+    </header>
 
-        <main>
-            <section>
-                <h2>My Places To Visit</h2>
-                
-                <table style="width: 100%; max-width: 1200px; text-align: center;">
-                    <tr>
-                        <td style="vertical-align: top; padding: 15px; width: 33%;">
-                            <article>
-                                <h3>Bonifacio Global City (BGC)</h3>
-                                <p><strong>Taguig City Metro Manila — The center of Probinsyudad</strong></p>
-                                <p>It is famous for being a ultra-modern, clean, and pedestrian-friendly financial and lifestyle district.</p>
-                                <img src="Images/bgc.jpg" alt="Renowned for upscale shopping, a vibrant culinary scene, striking public art murals, green open parks, and a buzzing nightlife" width="300">
-                            </article>
-                            <br>
-                            <a href="Places/bgc.html">View Details</a>
-                        </td>
+    <main>
+        <section>
+            <h2>My Places To Visit</h2>
+            
+            <div class="places-grid">
+                <article class="card">
+                    <h3>Bonifacio Global City (BGC)</h3>
+                    <p><strong>Taguig City Metro Manila — The center of Probinsyudad</strong></p>
+                    <p>It is famous for being a ultra-modern, clean, and pedestrian-friendly financial and lifestyle district.</p>
+                    <img src="Images/bgc.jpg" alt="Renowned for upscale shopping, a vibrant culinary scene, striking public art murals, green open parks, and a buzzing nightlife" width="300">
+                    <br><br>
+                    <a href="Places/bgc.html">Read More</a>
+                </article>
 
-                        <td style="vertical-align: top; padding: 15px; width: 33%;">
-                            <article>
-                                <h3>Venice Grand Canal Mall in McKinley Hill</h3>
-                                <p><strong>Taguig — Replicas of Venetian</strong></p>
-                                <p>It is famous for its romantic, Italy-inspired shopping mall setting featuring a man-made canal, authentic gondola rides with singing gondoliers.</p>
-                                <img src="Images/venice.jpg" alt="Inspired by the iconic Grand Canal in Venice, Italy" width="300">
-                            </article>
-                            <br>
-                            <a href="Places/venice.html">View Details</a>
-                        </td>
+                <article class="card">
+                    <h3>Venice Grand Canal Mall in McKinley Hill</h3>
+                    <p><strong>Taguig — Replicas of Venetian</strong></p>
+                    <p>It is famous for its romantic, Italy-inspired shopping mall setting featuring a man-made canal, authentic gondola rides with singing gondoliers.</p>
+                    <img src="Images/venice.jpg" alt="Inspired by the iconic Grand Canal in Venice, Italy" width="300">
+                    <br><br>
+                    <a href="Places/venice.html">Read More</a>
+                </article>
 
-                        <td style="vertical-align: top; padding: 15px; width: 33%;">
-                            <article>
-                                <h3>Laiya Beaches</h3>
-                                <p><strong>San Juan, Batangas — South Long Rides</strong></p>
-                                <p>It has light-colored sandy shores formed from weathered crushed shells, crystal-clear azure waters.</p>
-                                <img src="Images/laiya beach.jpg" alt="It has creamy-white sand, close proximity to Metro Manila (about a 2.5 to 3-hour drive)" width="300">
-                            </article>
-                            <br>
-                            <a href="Places/laiya.html">View Details</a>
-                        </td>
-                    </tr>
-                </table>
+                <article class="card">
+                    <h3>Laiya Beaches</h3>
+                    <p><strong>San Juan, Batangas — South Long Rides</strong></p>
+                    <p>It has light-colored sandy shores formed from weathered crushed shells, crystal-clear azure waters.</p>
+                    <img src="Images/laiya beach.jpg" alt="It has creamy-white sand, close proximity to Metro Manila (about a 2.5 to 3-hour drive)" width="300">
+                    <br><br>
+                    <a href="Places/laiya.html">Read More</a>
+                </article>
+            </div>
+        </section>
+    </main>
 
-            </section>
-        </main>
-        <footer>
-
-            <p>&copy; 2026 Moto-Drifter. All rights reserved.</p>
-        </footer>
-    </center>
-
-        
-    </body>
+    <footer>
+        <p>&copy; 2026 Moto-Drifter. All rights reserved.</p>
+    </footer>
+</body>
 </html>

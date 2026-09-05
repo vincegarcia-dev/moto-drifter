@@ -4,42 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Moto-Drifter</title>
-    <link rel="stylesheet" href="Style/about.css">
+    <!-- Linked to the shared global stylesheet -->
+    <link rel="stylesheet" href="Homepage_styles/index.css">
+    <link rel="stylesheet" href="Homepage_styles/about.css">
 </head>
 <body>
-    <center
+
     <header>
         <h1>Moto-Drifter</h1>
         <nav>
-            <ul style="list-style:none; padding:0;">
-                <li style="display:inline; margin:0 15px;"><a href="index.html">Home</a></li>
-                <li style="display:inline; margin:0 15px;"><a href="about.html">About</a></li>
-                <li style="display:inline; margin:0 15px;"><a href="contact.html">Contact</a></li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="about-section">
-            <h2>About the Owner</h2>
-
-            <!-- PROFILE SECTION -->
-            <section>
+        <section class="about-container">
+            <!-- Profile Section -->
+            <div class="card about-card">
+                <h2>About the Owner</h2>
                 <p>Hello I'm Vincent Ivan Burla, just like a storyteller, I'm always looking for the next great backdrop.</p>
-                <p> They say the best way to know a place is to just hit the road and see where it takes you.</p>
-                <img src="Images/gp.jpg" alt="Vincent Ivan Burla" width="300">
-            </section>
+                <p>They say the best way to know a place is to just hit the road and see where it takes you.</p>
+                <img src="Images/gp.jpg" alt="Vincent Ivan Burla">
+            </div>
 
-            <p>
-                Welcome! You've just stumbled upon my personal roadmap. Browse through the unforgettable places <br>
-                I’ve already been lucky enough to visit, and discover the must-see spots currently 
-                sitting at the top of my bucket list.<br>
-                
-            </p>
-
-            <img src="Images/agos.jpg" alt="Agos River" width="250"> 
+            <!-- Welcome/Journey Section -->
+            <div class="card about-card">
+                <h2>The Roadmap</h2>
+                <p>Welcome! You've just stumbled upon my personal roadmap. Browse through the unforgettable places I’ve already been lucky enough to visit, and discover the must-see spots currently sitting at the top of my bucket list.</p>
+                <img src="Images/agos.jpg" alt="Agos River"> 
+            </div>
         </section>
     </main>
-    </center>
+
+    <footer>
+        <p>&copy; 2026 Moto-Drifter. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

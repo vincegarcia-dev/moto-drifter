@@ -4,83 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Moto-Drifter</title>
-    <link rel="stylesheet" href="Style/contact.css">
+    <!-- Linked to the shared global stylesheet -->
+    <link rel="stylesheet" href="Homepage_styles/index.css">
+    <link rel="stylesheet" href="Homepage_styles/contact.css">
 </head>
 <body>
 
-    <center>
     <header>
         <h1>Moto-Drifter</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul style="list-style:none; padding:0;">
-            <li style="display:inline; margin:0 15px;"><a href="index.html">Home</a></li>
-            <li style="display:inline; margin:0 15px;"><a href="about.html">About</a></li>
-            <li style="display:inline; margin:0 15px;"><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <main>
+        <section class="contact-container">
+            <!-- Contact Information Area -->
+            <div class="card contact-info">
+                <h2>Contact Us</h2>
+                <p>You can reach us through:</p>
+                <ul class="info-list">
+                    <li><strong>Email:</strong> moto.drifter@gmail.com</li>
+                    <li><strong>Phone:</strong> +63 909 021 1087</li>
+                    <li><strong>Facebook:</strong> Moto-Drifter</li>
+                    <li><strong>Instagram:</strong> Moto-DrifterPH</li>
+                    <li><strong>Viber:</strong> Moto-Drifter No.1</li>
+                </ul>
+            </div>
 
-    </center>
+            <!-- Contact Client Form Area -->
+            <div class="card contact-form">
+                <h2>Send Us a Message</h2>
+                
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>Your details</legend>
 
-    <section>
-        <!-- Contact Information Area -->
-        <h2>Contact Us</h2>
-        <p>You can reach us through:</p>
-        <ul>
-            <li>Email: moto.drifter@gmail.com</li>
-            <li>Phone: +63 909 021 1087</li>
-            <li>Facebook: Moto-Drifter</li>
-            <li>Instagram: Moto-DrifterPH</li>
-            <li>Viber: Moto-Drifter No.1</li>
-        </ul>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
 
-        <!-- Contact Client Form Area -->
-        <h2>Send Us a Message</h2>
-        
-        <form action="#" method="POST">
-            <fieldset>
-                <legend>Your details</legend>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
 
-                <!-- Name Input -->
-                <div>
-                    <label for="name">Name</label><br>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <br>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="suggest">Suggest a place</option>
+                                <option value="correct">Correct a guide details</option>
+                                <option value="question">Ask a question</option>
+                                <option value="other">Something else</option>
+                            </select>
+                        </div>
 
-                <!-- Email Input -->
-                <div>
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <br>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
 
-                <!-- Subject Dropdown Selection -->
-                <div>
-                    <label for="subject">Subject</label><br>
-                    <select id="subject" name="subject">
-                        <option value="suggest">Suggest a place</option>
-                        <option value="correct">Correct a guide details</option>
-                        <option value="question">Ask a question</option>
-                        <option value="other">Something else</option>
-                    </select>
-                </div>
-                <br>
+                        <button type="submit" class="btn-submit">Send message</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
 
-                <!-- Client Message Text Area -->
-                <div>
-                    <label for="message">Message</label><br>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <br>
-
-                <!-- Submit Button -->
-                <button type="submit">Send message</button>
-            </fieldset>
-        </form>
-
-    </section>
+    <footer>
+        <p>&copy; 2026 Moto-Drifter. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

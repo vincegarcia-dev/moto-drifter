@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venice Grand Canal Mall - Moto-Drifter</title>
+    <link rel="stylesheet" href="../Homepage_styles/index.css">
+    <link rel="stylesheet" href="../Product_styles/venice.css">
+</head>
+<body>
+
+    <header>
+        <h1>Moto-Drifter</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="details-container">
+            
+            <!-- Location Details Card -->
+            <section class="card detail-card">
+                <h2>Venice Grand Canal Mall</h2>
+                <img src="../Images/venice.jpg" alt="Venice Grand Canal Mall in McKinley Hill">
+                
+                <p>Venice Grand Canal Mall is an Italian-inspired lifestyle and open-air mall located in the heart of McKinley Hill, Taguig City. <br>It is famous for its architectural replica of the Venetian canals, offering romantic gondola rides, diverse international dining options, and vibrant street performances.</p>
+
+                <table class="info-table">
+                    <tbody>
+                        <tr>
+                            <th>Located</th>
+                            <td>McKinley Hill, Taguig City, Metro Manila</td>
+                        </tr>
+                        <tr>
+                            <th>Opening Hours</th>
+                            <td>10:00 AM - 10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <th>Best Time to Visit</th>
+                            <td>Late Afternoon to Evening (for gondola rides and night lights)</td>
+                        </tr>
+                        <tr>
+                            <th>Entrance Fee</th>
+                            <td>Open to Public (Gondola ride is approx. ₱500)</td>
+                        </tr>
+                         <tr>
+                            <th>Type</th>
+                            <td>Lifestyle Mall / Tourist Attraction</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Suggestion Form Card -->
+            <section class="card form-card">
+                <h2 style="text-align: center;">Suggest a Place in McKinley Hill</h2>
+                
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="placeName">Place name:</label>
+                        <input type="text" id="placeName" name="placeName" required>
+                    </div>
+                    
+                    <fieldset class="choice-group">
+                        <legend>Category</legend>
+                        <div class="choice-item">
+                            <input type="radio" id="catFood" name="placeCategory" value="food">
+                            <label for="catFood">Food</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="radio" id="catStudy" name="placeCategory" value="study">
+                            <label for="catStudy">Study spot</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="radio" id="catOutdoors" name="placeCategory" value="outdoors">
+                            <label for="catOutdoors">Outdoors</label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="choice-group">
+                        <legend>What's good about it?</legend>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featAffordable" name="goodFeatures" value="affordable">
+                            <label for="featAffordable">Affordable</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featWifi" name="goodFeatures" value="wifi">
+                            <label for="featWifi">Good WIFI</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featQuiet" name="goodFeatures" value="quiet">
+                            <label for="featQuiet">Quiet</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featView" name="goodFeatures" value="view">
+                            <label for="featView">Great View / Aesthetic</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Contact email:</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Suggestion</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Moto-Drifter. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -3,112 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonifacio Global City</title>
-    <link rel="stylesheet" href="../Styles/bgc.css">
-    
+    <title>Bonifacio Global City - Moto-Drifter</title>
+    <link rel="stylesheet" href="../Homepage_styles/index.css">
+    <link rel="stylesheet" href="../Product_styles/bgc.css">
 </head>
 <body>
 
-    <h1>Moto-Drifter</h1>
-    
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <section class="top-section">
-        <h2>Bonifacio Global City</h2>
+    <header>
+        <h1>Moto-Drifter</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <img src="../Images/bgc.jpg" alt="Bonifacio Global City" width="400">
-
-        <p>
-            Bonifacio Global City (BGC) is a modern, clean, and pedestrian-friendly financial and lifestyle district in Taguig, Philippines. <br>
-            It is known for its upscale shopping, vibrant culinary scene, striking public art murals, green open parks, and buzzing nightlife.
-        </p>
-
-        <table border="1">
-            <tbody>
-                <tr>
-                    <th>Located</th>
-                    <td>Taguig City Metro Manila</td>
-                </tr>
-                <tr>
-                    <th>Opening Hours</th>
-                    <td>11:00 AM - 10:00 PM</td>
-                </tr>
-                <tr>
-                    <th>Best Time to Visit</th>
-                    <td>Morning, Late Afternoon or Evening</td>
-                </tr>
-                <tr>
-                    <th>Entrance Fee</th>
-                    <td>Open to Public</td>
-                </tr>
-                 <tr>
-                    <th>Type</th>
-                    <td>Commercial District</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <hr>
-
-    <section>
-        <h2>Suggest a Place</h2>
-        <form action="#" method="POST">
+    <main>
+        <div class="details-container">
             
-            <div>
-                <label for="placeName">Place name:</label>
-                <input type="text" id="placeName" name="placeName" required>
-            </div>
-            <br>
-        
-            <fieldset>
-                <legend>Category</legend>
-                <div>
-                    <input type="radio" id="catFood" name="placeCategory" value="food">
-                    <label for="catFood">Food</label>
-                </div>
-                <div>
-                    <input type="radio" id="catStudy" name="placeCategory" value="study">
-                    <label for="catStudy">Study spot</label>
-                </div>
-                <div>
-                    <input type="radio" id="catOutdoors" name="placeCategory" value="outdoors">
-                    <label for="catOutdoors">Outdoors</label>
-                </div>
-            </fieldset>
-            <br>
-            
-            <fieldset>
-                <legend>What's good about it?</legend>
-                <div>
-                    <input type="checkbox" id="featAffordable" name="goodFeatures" value="affordable">
-                    <label for="featAffordable">Affordable</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="featWifi" name="goodFeatures" value="wifi">
-                    <label for="featWifi">Goood WIFI</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="featQuiet" name="goodFeatures" value="quiet">
-                    <label for="featQuiet">Quiet</label>
-                </div>
-            </fieldset>
-            <br>
+            <!-- Location Details Card -->
+            <section class="card detail-card">
+                <h2>Bonifacio Global City</h2>
+                <img src="../Images/bgc.jpg" alt="Bonifacio Global City">
+                
+                <p>Bonifacio Global City (BGC) is a modern, clean, and pedestrian-friendly financial and lifestyle district in Taguig, Philippines. <br>It is known for its upscale shopping, vibrant culinary scene, striking public art murals, green open parks, and buzzing nightlife.</p>
 
-            <div>
-                <label for="contactEmail">Contact email:</label>
-                <input type="email" id="contactEmail" name="contactEmail" required>
-            </div>
-            <br>
+                <table class="info-table">
+                    <tbody>
+                        <tr>
+                            <th>Located</th>
+                            <td>Taguig City Metro Manila</td>
+                        </tr>
+                        <tr>
+                            <th>Opening Hours</th>
+                            <td>11:00 AM - 10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <th>Best Time to Visit</th>
+                            <td>Morning, Late Afternoon or Evening</td>
+                        </tr>
+                        <tr>
+                            <th>Entrance Fee</th>
+                            <td>Open to Public</td>
+                        </tr>
+                         <tr>
+                            <th>Type</th>
+                            <td>Commercial District</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-            <button type="submit">Submit Suggestion</button>
-        </form>
-    </section>
+            <!-- Suggestion Form Card -->
+            <section class="card form-card">
+                <h2 style="text-align: center;">Suggest a Place</h2>
+                
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="placeName">Place name:</label>
+                        <input type="text" id="placeName" name="placeName" required>
+                    </div>
+                    
+                    <fieldset class="choice-group">
+                        <legend>Category</legend>
+                        <div class="choice-item">
+                            <input type="radio" id="catFood" name="placeCategory" value="food">
+                            <label for="catFood">Food</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="radio" id="catStudy" name="placeCategory" value="study">
+                            <label for="catStudy">Study spot</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="radio" id="catOutdoors" name="placeCategory" value="outdoors">
+                            <label for="catOutdoors">Outdoors</label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="choice-group">
+                        <legend>What's good about it?</legend>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featAffordable" name="goodFeatures" value="affordable">
+                            <label for="featAffordable">Affordable</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featWifi" name="goodFeatures" value="wifi">
+                            <label for="featWifi">Good WIFI</label>
+                        </div>
+                        <div class="choice-item">
+                            <input type="checkbox" id="featQuiet" name="goodFeatures" value="quiet">
+                            <label for="featQuiet">Quiet</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Contact email:</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Suggestion</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Moto-Drifter. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
