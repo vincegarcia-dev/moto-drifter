@@ -6,7 +6,6 @@
     --light-bg: #f2f2f7;
 }
 
-
 * {
     box-sizing: border-box;
 }
@@ -19,17 +18,23 @@ body {
     margin: 0;
 }
 
-
+/* Header: Flexbox layout from Module instructions */
 header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
-    padding: 3rem 1rem 2rem;
+    padding: 2rem;
     border-bottom: 3px solid var(--brand-color); 
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
+.brand {
+    text-align: left;
+}
+
 header h1 {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.2rem 0;
     font-size: 2.5rem;
     letter-spacing: -1px;
     text-transform: uppercase;
@@ -38,30 +43,18 @@ header h1 {
     -webkit-text-fill-color: transparent;
 }
 
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
+header p {
+    margin: 0;
+    font-weight: 500;
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--dark-ink);
-    color: var(--light-bg);
-    margin-top: 3rem;
-}
-
-
+/* Nav: Flexbox replaces inline-block */
 nav ul {
+    display: flex;
+    gap: 20px; /* Used for spacing rather than margins */
     list-style: none;
     padding: 0;
-    margin-top: 1.5rem;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav a {
@@ -78,20 +71,31 @@ nav a:hover {
     color: var(--brand-color);
 }
 
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
 
+/* Centers the section heading */
+main section h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* Places Grid Container */
 .places-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    gap: 24px;
 }
 
+/* Cards: Grow, shrink, wrap smoothly */
 .card {
+    flex: 1 1 240px; /* Flexbox responsive sizing */
     background-color: white;
     border-radius: 12px;
     padding: 25px;
-    width: 30%;
-    min-width: 300px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
@@ -127,4 +131,21 @@ nav a:hover {
 .card a:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
+}
+
+/* Footer: Flexbox centering implementation */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px; /* Needs a height for vertical centering to have room to work */
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark-ink);
+    color: var(--light-bg);
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0;
 }
