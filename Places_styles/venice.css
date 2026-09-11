@@ -1,5 +1,5 @@
 /* =========================================================
-   1. Variables - Vibrant red brand colors and gradients 
+   1. Variables - Spiced up with a vibrant red and gradients 
    ========================================================= */
 :root {
     --brand-color: #ff3b30; 
@@ -9,9 +9,6 @@
     --light-bg: #f2f2f7;
 }
 
-/* =========================================================
-   2. Base styles 
-   ========================================================= */
 * {
     box-sizing: border-box;
 }
@@ -24,13 +21,13 @@ body {
     margin: 0;
 }
 
-/* =========================================================
-   3. Layout regions (Header, Main, Footer, Nav)
-   ========================================================= */
+
 header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
-    padding: 3rem 1rem 2rem;
+    padding: 2rem 2rem; /* Adjusted padding to look better with flex layout */
     border-bottom: 3px solid var(--brand-color);
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
@@ -61,14 +58,15 @@ footer {
 
 /* Style the Nav */
 nav ul {
+    display: flex;
+    gap: 20px;
     list-style: none;
     padding: 0;
-    margin-top: 1.5rem;
+    margin: 0;
 }
 
 nav li {
-    display: inline-block;
-    margin: 0 15px;
+    /* Removed display: inline-block and margin, flexbox handles it now */
 }
 
 nav a {
@@ -85,9 +83,7 @@ nav a:hover {
     color: var(--brand-color);
 }
 
-/* =========================================================
-   4. Shared Components (Cards & Buttons used everywhere)
-   ========================================================= */
+
 .card {
     background-color: white;
     border-radius: 12px;
@@ -109,7 +105,7 @@ nav a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Link Button styling (Home Page) */
+
 .card a.btn-link, 
 .places-grid .card a {
     text-decoration: none;
@@ -128,7 +124,6 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
 }
 
-/* Submit Button styling (Forms) */
 .btn-submit {
     background: var(--brand-gradient);
     color: white;
@@ -148,25 +143,20 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
 }
 
-/* =========================================================
-   5. Home Page Layout Specifics 
-   ========================================================= */
+
 .places-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 24px; /* Adjusted gap to 24px based on instructions */
     justify-content: center;
 }
 
 .places-grid .card {
-    width: 30%;
-    min-width: 300px;
+    flex: 1 1 240px; /* Allows cards to shrink/grow and set a 240px breakpoint */
     text-align: center;
 }
 
-/* =========================================================
-   6. Contact Page Layout Specifics 
-   ========================================================= */
+
 .contact-container {
     display: flex;
     flex-wrap: wrap;
@@ -232,9 +222,6 @@ legend {
     box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.2);
 }
 
-/* =========================================================
-   7. About Page Layout Specifics 
-   ========================================================= */
 .about-container {
     display: flex;
     flex-wrap: wrap;
@@ -255,9 +242,6 @@ legend {
     margin-top: auto; 
 }
 
-/* =========================================================
-   8. Details Pages (BGC, Laiya, Venice) Layout Specifics
-   ========================================================= */
 .details-container {
     display: flex;
     flex-direction: column;
@@ -270,7 +254,6 @@ legend {
     max-width: 700px;
 }
 
-/* Table Styling for Details Pages */
 .info-table {
     width: 100%;
     border-collapse: collapse;
@@ -294,7 +277,6 @@ legend {
     border-bottom: none;
 }
 
-/* Radio & Checkbox grouping styling */
 .form-card {
     text-align: left;
 }
