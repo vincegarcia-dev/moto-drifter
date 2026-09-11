@@ -1,11 +1,9 @@
 :root {
     --brand-color: #ff3b30; 
-    --brand-gradient: linear-gradient(135deg, #ff3b30, #c21807);
+    --brand-gradient: linear-gradient(135deg, #ff3b30, #8a7aad);
     --dark-ink: #1c1c1e;
     --muted-grey: #d1d1d6;
-    /* Updated background color based on image_cbab4a.jpg (creamy beige) */
     --light-bg: #FCF7F1; 
-    /* Added the orange-to-magenta gradient for the buttons */
     --button-gradient: linear-gradient(to right, #ff7e00, #e60073);
 }
 
@@ -17,7 +15,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     color: var(--dark-ink);
-    background-color: var(--light-bg); /* Uses the new beige color */
+    background-color: var(--light-bg); 
     margin: 0;
 }
 
@@ -26,7 +24,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white; /* You can change this to var(--dark-ink) if you want the dark header from the image */
+    background-color: white; 
     padding: 2rem;
     border-bottom: 3px solid var(--brand-color); 
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
@@ -84,7 +82,6 @@ main {
 main section h2 {
     text-align: center;
     margin-bottom: 2.5rem;
-    /* You can add 'color: #6a1a41;' here if you want to match the dark maroon heading from the image */
 }
 
 /* Places Grid Container */
@@ -119,10 +116,9 @@ main section h2 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Updated Button styling for "Read More" based on the image */
 .card a {
     text-decoration: none;
-    background: var(--button-gradient); /* Uses the new orange-to-magenta gradient */
+    background: var(--button-gradient); 
     color: white; 
     padding: 10px 24px;
     border-radius: 25px; 
