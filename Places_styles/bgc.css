@@ -6,7 +6,8 @@
     --brand-gradient: linear-gradient(135deg, #ff3b30, #8a7aad);
     --dark-ink: #1c1c1e;
     --muted-grey: #d1d1d6;
-    --light-bg: #f2f2f7;
+    --light-bg: #FCF7F1; 
+    --button-gradient: linear-gradient(to right, #ff7e00, #e60073);
 }
 
 * {
