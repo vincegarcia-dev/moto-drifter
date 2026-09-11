@@ -3,7 +3,10 @@
     --brand-gradient: linear-gradient(135deg, #ff3b30, #c21807);
     --dark-ink: #1c1c1e;
     --muted-grey: #d1d1d6;
-    --light-bg: #f2f2f7;
+    /* Updated background color based on image_cbab4a.jpg (creamy beige) */
+    --light-bg: #FCF7F1; 
+    /* Added the orange-to-magenta gradient for the buttons */
+    --button-gradient: linear-gradient(to right, #ff7e00, #e60073);
 }
 
 * {
@@ -14,7 +17,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     color: var(--dark-ink);
-    background-color: var(--light-bg);
+    background-color: var(--light-bg); /* Uses the new beige color */
     margin: 0;
 }
 
@@ -23,7 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: white; /* You can change this to var(--dark-ink) if you want the dark header from the image */
     padding: 2rem;
     border-bottom: 3px solid var(--brand-color); 
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
@@ -51,7 +54,7 @@ header p {
 /* Nav: Flexbox replaces inline-block */
 nav ul {
     display: flex;
-    gap: 20px; /* Used for spacing rather than margins */
+    gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -81,6 +84,7 @@ main {
 main section h2 {
     text-align: center;
     margin-bottom: 2.5rem;
+    /* You can add 'color: #6a1a41;' here if you want to match the dark maroon heading from the image */
 }
 
 /* Places Grid Container */
@@ -92,7 +96,7 @@ main section h2 {
 
 /* Cards: Grow, shrink, wrap smoothly */
 .card {
-    flex: 1 1 240px; /* Flexbox responsive sizing */
+    flex: 1 1 240px; 
     background-color: white;
     border-radius: 12px;
     padding: 25px;
@@ -104,7 +108,7 @@ main section h2 {
 /* The Spice: Hover Effect */
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(255, 59, 48, 0.15); 
+    box-shadow: 0 12px 24px rgba(230, 0, 115, 0.15); 
 }
 
 .card img {
@@ -115,11 +119,11 @@ main section h2 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Button styling */
+/* Updated Button styling for "Read More" based on the image */
 .card a {
     text-decoration: none;
-    background: var(--brand-gradient);
-    color: white;
+    background: var(--button-gradient); /* Uses the new orange-to-magenta gradient */
+    color: white; 
     padding: 10px 24px;
     border-radius: 25px; 
     display: inline-block;
@@ -130,7 +134,7 @@ main section h2 {
 
 .card a:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
+    box-shadow: 0 4px 12px rgba(230, 0, 115, 0.3); 
 }
 
 /* Footer: Flexbox centering implementation */
@@ -138,11 +142,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 120px; /* Needs a height for vertical centering to have room to work */
+    min-height: 120px; 
     text-align: center;
     padding: 2rem;
     background-color: var(--dark-ink);
-    color: var(--light-bg);
+    color: white;
     margin-top: 3rem;
 }
 
