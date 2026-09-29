@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
@@ -19,7 +23,43 @@ body {
     margin: 0;
 }
 
-/* Header: Flexbox layout from Module instructions */
+/* =========================================================
+   PAGE SKELETON: Grid Areas & Mobile-First Setup
+   ========================================================= */
+
+/* Area assignments */
+header { grid-area: masthead; }
+aside  { grid-area: side; }
+main   { grid-area: main; }
+footer { grid-area: foot; }
+
+/* Base: mobile – single column, everything stacked */
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "masthead"
+        "main"
+        "side"
+        "foot";
+    gap: 16px;
+}
+
+/* Enhance at tablet and up */
+@media (min-width: 700px) {
+    .page {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side     main"
+            "foot     foot";
+        gap: 24px;
+    }
+}
+
+/* =========================================================
+   HEADER COMPONENT (Flexbox)
+   ========================================================= */
 header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +67,9 @@ header {
     background-color: white; 
     padding: 2rem;
     border-bottom: 3px solid var(--brand-color); 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .brand {
@@ -49,7 +91,6 @@ header p {
     font-weight: 500;
 }
 
-/* Nav: Flexbox replaces inline-block */
 nav ul {
     display: flex;
     gap: 20px;
@@ -72,37 +113,124 @@ nav a:hover {
     color: var(--brand-color);
 }
 
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
+/* =========================================================
+   SIDEBAR COMPONENT (Moto-Drifter Themed)
+   ========================================================= */
+aside {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.75rem 1.5rem;
+    margin: 0 1.5rem;
+    align-self: start;
+    border-top: 4px solid var(--brand-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Centers the section heading */
+aside:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(255, 59, 48, 0.12);
+}
+
+@media (min-width: 700px) {
+    aside {
+        margin: 3rem 0 0 1.5rem;
+        position: sticky;
+        top: 2rem;
+    }
+}
+
+aside h3 {
+    margin: 0 0 1.25rem 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+aside ul li a {
+    display: block;
+    color: var(--dark-ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: var(--light-bg);
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+aside ul li a:hover {
+    background-color: white;
+    border-left-color: var(--brand-color);
+    color: var(--brand-color);
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-tip {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255, 59, 48, 0.06);
+    border: 1px dashed rgba(255, 59, 48, 0.3);
+    color: var(--dark-ink);
+}
+
+.sidebar-tip strong {
+    color: var(--brand-color);
+    display: block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   MAIN CONTENT & PLACES CARDS (Flexbox Components)
+   ========================================================= */
+main {
+    max-width: 1200px;
+    margin: 0;
+    padding: 3rem 1.5rem;
+}
+
 main section h2 {
     text-align: center;
     margin-bottom: 2.5rem;
 }
 
-/* Places Grid Container */
 .places-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 }
 
-/* Cards: Grow, shrink, wrap smoothly */
 .card {
     flex: 1 1 240px; 
     background-color: white;
     border-radius: 12px;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    scroll-margin-top: 2rem;
 }
 
-/* The Spice: Hover Effect */
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(230, 0, 115, 0.15); 
@@ -113,7 +241,7 @@ main section h2 {
     height: auto;
     border-radius: 8px;
     margin: 15px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card a {
@@ -133,7 +261,9 @@ main section h2 {
     box-shadow: 0 4px 12px rgba(230, 0, 115, 0.3); 
 }
 
-/* Footer: Flexbox centering implementation */
+/* =========================================================
+   FOOTER COMPONENT (Flexbox Centering)
+   ========================================================= */
 footer {
     display: flex;
     justify-content: center;
