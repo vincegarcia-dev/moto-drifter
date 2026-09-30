@@ -148,12 +148,12 @@ nav a:hover {
 .places-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px; /* Adjusted gap to 24px based on instructions */
+    gap: 24px; 
     justify-content: center;
 }
 
 .places-grid .card {
-    flex: 1 1 240px; /* Allows cards to shrink/grow and set a 240px breakpoint */
+    flex: 1 1 240px; 
     text-align: center;
 }
 
@@ -178,7 +178,7 @@ nav a:hover {
     line-height: 2;
 }
 
-/* Form Styling */
+
 fieldset {
     border: 1px solid var(--muted-grey);
     border-radius: 8px;
