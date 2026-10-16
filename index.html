@@ -9,7 +9,7 @@
 <body class="page">
     <header>
         <div class="brand">
-            <h1>Moto-Drifter</h1>
+            <h1 id="guide-name">Moto-Drifter</h1>
             <p>Two Wheels. Zero Grip. Pure Adrenaline.</p>
         </div>
         <nav>
@@ -36,40 +36,61 @@
     <main>
         <section>
             <h2>My Places To Visit</h2>
+            <p><strong>Total Places Reviewed: <span id="total-places">0</span></strong></p>
             
             <div class="places-grid">
+                <!-- CARD 1: BGC -->
                 <article class="card" id="bgc">
                     <h3>Bonifacio Global City (BGC)</h3>
                     <p><strong>Taguig City Metro Manila <br> ( The center of Probinsyudad )</strong></p>
                     <p>It is famous for being a ultra-modern, clean, and pedestrian-friendly financial and lifestyle district.</p>
-                    <img src="Images/bgc.jpg" alt="Renowned for upscale shopping, a vibrant culinary scene, striking public art murals, green open parks, and a buzzing nightlife" width="300">
+                    
+                    <p><strong>Rating:</strong> <span id="bgc-rating-label"></span></p>
+                    <p><strong>Status:</strong> <span id="bgc-budget-status"></span></p>
+                    <p><strong>Travel:</strong> <span id="bgc-distance-status"></span></p>
+
+                    <img src="Images/bgc.jpg" alt="BGC image" width="300">
                     <br><br>
-                    <a href="Places/bgc.html">Read More</a>
+                    <a href="Places/bgc.html" class="read-more-btn">Read More</a>
                 </article>
 
+                <!-- CARD 2: Venice Grand Canal -->
                 <article class="card" id="venice">
                     <h3>Venice Grand Canal Mall in McKinley Hill</h3>
                     <p><strong>Taguig City Metro Manila <br> ( Replicas of Venetian )</strong></p>
                     <p>It is famous for its romantic, Italy-inspired shopping mall setting featuring a man-made canal, authentic gondola rides with singing gondoliers.</p>
-                    <img src="Images/venice.jpg" alt="Inspired by the iconic Grand Canal in Venice, Italy" width="300">
+                    
+                    <p><strong>Rating:</strong> <span id="venice-rating-label"></span></p>
+                    <p><strong>Status:</strong> <span id="venice-budget-status"></span></p>
+                    <p><strong>Travel:</strong> <span id="venice-distance-status"></span></p>
+
+                    <img src="Images/venice.jpg" alt="Venice image" width="300">
                     <br><br>
-                    <a href="Places/venice.html">Read More</a>
+                    <a href="Places/venice.html" class="read-more-btn">Read More</a>
                 </article>
 
+                <!-- CARD 3: Laiya Beaches -->
                 <article class="card" id="laiya">
                     <h3>Laiya Beaches</h3>
                     <p><strong>San Juan, Batangas <br> ( South Long Rides )</strong></p>
                     <p>It has light-colored sandy shores formed from weathered crushed shells, crystal-clear azure waters.</p>
-                    <img src="Images/laiya beach.jpg" alt="It has creamy-white sand, close proximity to Metro Manila (about a 2.5 to 3-hour drive)" width="300">
+                    
+                    <p><strong>Rating:</strong> <span id="laiya-rating-label"></span></p>
+                    <p><strong>Status:</strong> <span id="laiya-budget-status"></span></p>
+                    <p><strong>Travel:</strong> <span id="laiya-distance-status"></span></p>
+
+                    <img src="Images/laiya beach.jpg" alt="Laiya beach image" width="300">
                     <br><br>
-                    <a href="Places/laiya.html">Read More</a>
+                    <a href="Places/laiya.html" class="read-more-btn">Read More</a>
                 </article>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Moto-Drifter. All rights reserved.</p>
+        <p id="footer-text">&copy; 2026 Moto-Drifter. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
